@@ -2,19 +2,20 @@ import React from 'react';
 import { Audio } from 'react-loader-spinner';
 
 
-// import css from './styles.module.css';
+import css from '../styles.module.css';
 
-const Loader = () => {
+const Loader = ({text}) => {
   return (
-    <span><Audio
+<div className={css.loader}>
+<Audio
     height="80"
     width="80"
     radius="9"
     color="blue"
     ariaLabel="loading"
-    wrapperStyle
-    wrapperClass
-  /></span>
+  />
+  <h2 className={css.title}>{text}</h2>
+</div>
   )
 }
 
