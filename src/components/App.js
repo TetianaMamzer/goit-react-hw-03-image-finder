@@ -75,6 +75,9 @@ class App extends Component {
     }
   };
   searchInput = nameImg => {
+    if(nameImg === this.state.nameImg) {
+      return;
+    }
     this.setState({ nameImg, gallery: [], page: 1 });
   };
 
